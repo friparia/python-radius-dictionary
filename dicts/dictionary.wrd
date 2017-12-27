@@ -1,0 +1,18 @@
+# -*- text -*-
+# Copyright (C) 2017 WRD Technology Co., Ltd.
+#
+VENDOR		WRD				37940
+BEGIN-VENDOR	WRD
+
+ATTRIBUTE	WRD-Realm-Type			1	integer
+ATTRIBUTE	WRD-Device-Group		2	integer
+ATTRIBUTE	WRD-User-Group			3	integer
+ATTRIBUTE	WRD-Service-Group		4	integer
+ATTRIBUTE	WRD-Location-Id			5	string
+ATTRIBUTE	WRD-Device-Type			6	string
+ATTRIBUTE	WRD-Essid-Name			7	string
+
+VALUE	WRD-Realm-Type	Normal			1
+VALUE	WRD-Realm-Type	NT-Domain		2
+
+END-VENDOR WRD
