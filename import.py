@@ -1,9 +1,9 @@
-from pyrad.dictionary import Dictionary
 import config
 import sys
 import MySQLdb
 import os
 import struct
+from dictionary import Dictionary
 
 
 def import_by_file(path):
@@ -27,7 +27,7 @@ def import_by_file(path):
             for (value_name, value) in attribute.values.forward.items():
                 sql = "INSERT IGNORE INTO `rad_value` (`vendor`, `code`, `name`, `value`)  VALUES ('" + str(vendor) + "', '" + str(attribute.code) + "', '" + value_name + "', " +  value + ")"
                 cursor.execute(sql)
-    db.commit()
+    #db.commit()
 
 
 if __name__ == '__main__':
