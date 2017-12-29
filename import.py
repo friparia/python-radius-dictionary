@@ -3,6 +3,7 @@ import config
 import sys
 import MySQLdb
 import os
+import struct
 
 
 def import_by_file(path):
@@ -26,7 +27,9 @@ def import_by_file(path):
             print attribute.vendor, attribute.type
         if len(attribute.values):
             for (value_name, value) in attribute.values.forward.items():
-                sql = "INSERT IGNORE INTO `value` (`vendor`, `code`, `name`, `value`)  VALUES ('" + str(vendor) + "', '" + str(attribute.code) + "', '" + value_name + "', UNHEX('" + value.encode('hex') + "'))"
+                sql = "INSERT IGNORE INTO `value` (`vendor`, `code`, `name`, `value`)  VALUES ('" + str(vendor) + "', '" + str(attribute.code) + "', '" + value_name + "', " +  value + ")"
+                print sql
+                cursor.execute(sql)
     db.commit()
 
 
