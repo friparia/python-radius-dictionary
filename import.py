@@ -14,21 +14,18 @@ def import_by_file(path):
     for (key, vendor) in  dictionary.vendors.backward.items():
         if key == 0:
             continue
-        sql = "INSERT IGNORE INTO `vendor` (`id`, `name`) VALUES ('" + str(key) + "', '" + vendor + "')"
+        t,l = dictionary.vendor_formats[key]
+        sql = "INSERT IGNORE INTO `rad_vendor` (`id`, `name`, `type_length`, `length_length`) VALUES ('" + str(key) + "', '" + vendor + "', " + str(t) + ", " + str(l) + ")"
         cursor.execute(sql)
 
     attributes = dictionary.attributes
     for (name, attribute) in attributes.items():
         vendor = dictionary.vendors.GetForward(attribute.vendor)
-        sql = "INSERT IGNORE INTO `attribute` (`name`, `vendor`, `code`, `encrypt`, `has_tag`, `type`) VALUES ('" + attribute.name + "', '" + str(vendor) + "', '" + str(attribute.code) + "', '" + str(attribute.encrypt) + "', '" + str(int(attribute.has_tag)) + "', '" + str(attribute.type) + "')"
+        sql = "INSERT IGNORE INTO `rad_attribute` (`name`, `vendor`, `code`, `encrypt`, `has_tag`, `type`) VALUES ('" + attribute.name + "', '" + str(vendor) + "', '" + str(attribute.code) + "', '" + str(attribute.encrypt) + "', '" + str(int(attribute.has_tag)) + "', '" + str(attribute.type) + "')"
         cursor.execute(sql)
-        types = ['string','octets','ipaddr','date','integer','signed','short','ipv6addr','ipv6prefix','ifid','integer64','abinary']
-        if attribute.type not in types:
-            print attribute.vendor, attribute.type
         if len(attribute.values):
             for (value_name, value) in attribute.values.forward.items():
-                sql = "INSERT IGNORE INTO `value` (`vendor`, `code`, `name`, `value`)  VALUES ('" + str(vendor) + "', '" + str(attribute.code) + "', '" + value_name + "', " +  value + ")"
-                print sql
+                sql = "INSERT IGNORE INTO `rad_value` (`vendor`, `code`, `name`, `value`)  VALUES ('" + str(vendor) + "', '" + str(attribute.code) + "', '" + value_name + "', " +  value + ")"
                 cursor.execute(sql)
     db.commit()
 

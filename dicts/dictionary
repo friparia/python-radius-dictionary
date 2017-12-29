@@ -64,7 +64,6 @@
 #	this directive to the end of this file if you want to see the
 #	old names in the logfiles, instead of the new names.
 #
-$INCLUDE dictionary.compat
 
 #
 #	These dictionaries define attributes in the IETF managed space.
@@ -113,7 +112,7 @@ $INCLUDE dictionary.rfc6930
 $INCLUDE dictionary.rfc7055
 $INCLUDE dictionary.rfc7155
 $INCLUDE dictionary.rfc7268
-$INCLUDE dictionary.rfc7499
+#$INCLUDE dictionary.rfc7499
 $INCLUDE dictionary.rfc7930
 
 #
@@ -173,6 +172,7 @@ $INCLUDE dictionary.citrix
 $INCLUDE dictionary.clavister
 $INCLUDE dictionary.cnergee
 $INCLUDE dictionary.colubris
+#$INCLUDE dictionary.compat
 $INCLUDE dictionary.compatible
 $INCLUDE dictionary.cosine
 $INCLUDE dictionary.dante
@@ -223,7 +223,7 @@ $INCLUDE dictionary.microsemi
 $INCLUDE dictionary.microsoft
 $INCLUDE dictionary.mikrotik
 $INCLUDE dictionary.motorola
-$INCLUDE dictionary.motorola.wimax
+#$INCLUDE dictionary.motorola.wimax
 $INCLUDE dictionary.navini
 $INCLUDE dictionary.netscreen
 $INCLUDE dictionary.networkphysics
@@ -283,7 +283,7 @@ $INCLUDE dictionary.waverider
 $INCLUDE dictionary.walabi
 $INCLUDE dictionary.wichorus
 $INCLUDE dictionary.wifialliance
-$INCLUDE dictionary.wimax
+#$INCLUDE dictionary.wimax
 $INCLUDE dictionary.wispr
 $INCLUDE dictionary.xedia
 $INCLUDE dictionary.xylan
@@ -298,4 +298,4 @@ $INCLUDE dictionary.wrd
 #	And finally the server internal attributes.
 #	These are attributes which NEVER go into a RADIUS packet.
 #
-$INCLUDE dictionary.freeradius.internal
+#$INCLUDE dictionary.freeradius.internal
