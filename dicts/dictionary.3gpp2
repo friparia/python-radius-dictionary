@@ -1,12 +1,14 @@
 # -*- text -*-
+# Copyright (C) 2015 The FreeRADIUS Server project and contributors
 #
 #	3GPP2 stuff.
 #
 #	http://www.3gpp2.org/Public_html/specs/index.cfm
 #	X.S0011-005-C v1.0
 #	http://www.3gpp2.org/Public_html/specs/X.S0011-005-C_v2.0_050708.pdf
+#	http://www.3gpp2.org/public_html/specs/X.S0011-005-C_v3.0_061030.pdf
 #
-#	$Id$
+#	$Id: 1b89cb29f284d20a6236ed1d9350c94e6972a4d7 $
 #
 VENDOR		3GPP2				5535
 
@@ -58,7 +60,7 @@ ATTRIBUTE	3GPP2-IP-QoS				36	integer
 # 37-38 ?
 ATTRIBUTE	3GPP2-Airlink-Priority			39	integer
 ATTRIBUTE	3GPP2-Airlink-Record-Type		40	integer # ?
-#ATTRIBUTE	3GPP2-R-P-Session-ID		41	string
+#ATTRIBUTE	3GPP2-R-P-Session-ID			41	string
 ATTRIBUTE	3GPP2-Airlink-Sequence-Number		42	integer # ?
 ATTRIBUTE	3GPP2-Received-HDLC-Octets		43	integer
 ATTRIBUTE	3GPP2-Correlation-Id			44	string
@@ -107,8 +109,16 @@ ATTRIBUTE	3GPP2-Reverse-DHHC-RC			87	integer
 ATTRIBUTE	3GPP2-Session-Termination-Capability	88	integer
 ATTRIBUTE	3GPP2-Allowed-Persistent-TFTs		89	integer
 
-# The next set of attributes contain sub-types
-ATTRIBUTE	3GPP2-Prepaid-Acct-Quota		90	octets
+ATTRIBUTE	3GPP2-Prepaid-Acct-Quota		90	tlv
+
+ATTRIBUTE	3GPP2-Prepaid-Acct-Quota-QuotaIDentifier 90.1	integer
+ATTRIBUTE	3GPP2-Prepaid-Acct-Quota-VolumeQuota	90.2	integer
+ATTRIBUTE	3GPP2-Prepaid-Acct-Quota-VolumeQuotaOverflow 90.3	integer
+ATTRIBUTE	3GPP2-Prepaid-Acct-Quota-VolumeThreshold 90.4	integer
+ATTRIBUTE	3GPP2-Prepaid-Acct-Quota-VolumeThresholdOverflow 90.5	integer
+ATTRIBUTE	3GPP2-Prepaid-Acct-Quota-UpdateReason	90.8	short
+
+# The next two attributes contain sub-types
 ATTRIBUTE	3GPP2-Prepaid-acct-Capability		91	octets
 ATTRIBUTE	3GPP2-MIP-Lifetime			92	octets
 
@@ -123,10 +133,17 @@ ATTRIBUTE	3GPP2-Disconnect-Reason			96	integer
 # The next set of attributes contain sub-types
 ATTRIBUTE	3GPP2-Remote-IPv6-Octet-Count		97	octets
 ATTRIBUTE	3GPP2-PrePaid-Tariff-Switching		98	octets
+ATTRIBUTE	3GPP2-MEID				116	octets
+ATTRIBUTE	3GPP2-DNS-Server-IP-Address		117	octets
 
-ATTRIBUTE       3GPP2-HA-Request                        168     integer
-ATTRIBUTE       3GPP2-HA-Authorised                     169     integer
-ATTRIBUTE       3GPP2-IP-Ver-Authorised                 172     integer
-ATTRIBUTE       3GPP2-MIPv4-Mesg-Id                     173     string
+ATTRIBUTE	3GPP2-Carrier-ID			142	string
+
+# More sub-types
+ATTRIBUTE	3GPP2-GMT-Time-Zone-Offset		143	signed
+
+ATTRIBUTE	3GPP2-HA-Request			168	integer
+ATTRIBUTE	3GPP2-HA-Authorised			169	integer
+ATTRIBUTE	3GPP2-IP-Ver-Authorised			172	integer
+ATTRIBUTE	3GPP2-MIPv4-Mesg-Id			173	string
 
 END-VENDOR 3GPP2

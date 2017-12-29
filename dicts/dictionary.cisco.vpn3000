@@ -1,4 +1,5 @@
 # -*- text -*-
+# Copyright (C) 2017 The FreeRADIUS Server project and contributors
 #
 #	 Cisco VPN 3000 Concentrator Dictionary
 #
@@ -7,7 +8,7 @@
 #
 # http://www.cisco.com/en/US/docs/security/asa/asa80/configuration/guide/extsvr.html#wp1661512
 #
-#	$Id$
+#	$Id: e2dae38c900647cd5afc19deb2e65c8fceae4f14 $
 #
 VENDOR		Cisco-VPN3000			3076
 
@@ -83,6 +84,33 @@ ATTRIBUTE	CVPN3000-WebVPN-Exchange-Addr		74	string
 ATTRIBUTE	CVPN3000-LEAP-Bypass			75	integer
 ATTRIBUTE	CVPN3000-WebVPN-Exchange-NETBIOS-name	78	string
 ATTRIBUTE	CVPN3000-Port-Forwarding-Name		79	string
+ATTRIBUTE	CVPN3000-IE-Proxy-Server		80	string
+ATTRIBUTE	CVPN3000-IE-Proxy-Server-Policy		81	integer
+ATTRIBUTE	CVPN3000-IE-Proxy-Exception-List	82	string
+ATTRIBUTE	CVPN3000-IE-Proxy-Bypass-Local		83	integer
+ATTRIBUTE	CVPN3000-IKE-Keepalive-Retry-Interval	84	integer
+ATTRIBUTE	CVPN3000-Tunnel-Group-Lock		85	string
+ATTRIBUTE	Cisco-VPN3000-Access-List-Inbound	86	string
+ATTRIBUTE	Cisco-VPN3000-Access-List-Outbound	87	string
+ATTRIBUTE	Cisco-VPN3000-Perfect-Forward-Secrecy-Enable 88	integer
+ATTRIBUTE	Cisco-VPN3000-NAC-Enable		89	integer
+ATTRIBUTE	Cisco-VPN3000-NAC-Status-Query-Timer	90	integer
+ATTRIBUTE	Cisco-VPN3000-NAC-Revalidation-Timer	91	integer
+ATTRIBUTE	Cisco-VPN3000-NAC-Default-ACL		92	integer
+ATTRIBUTE	Cisco-VPN3000-WebVPN-URL-Entry-Enable	93	integer
+ATTRIBUTE	Cisco-VPN3000-WebVPN-File-Access-Enable	94	integer
+ATTRIBUTE	Cisco-VPN3000-WebVPN-File-Server-Entry-Enable 95	integer
+ATTRIBUTE	Cisco-VPN3000-WebVPN-File-Server-Browsing-Enable 96	integer
+ATTRIBUTE	Cisco-VPN3000-WebVPN-Port-Forwarding-Enable 97	integer
+ATTRIBUTE	Cisco-VPN3000-WebVPN-Outlook-Exchange-Proxy-Enable 98	integer
+ATTRIBUTE	Cisco-VPN3000-WebVPN-HTTP-Proxy-Enable 99	integer
+ATTRIBUTE	Cisco-VPN3000-WebVPN-Auto-Applet-Download-Enable 100	integer
+ATTRIBUTE	Cisco-VPN3000-WebVPN-Citrix-MetaFrame-Enable 101	integer
+ATTRIBUTE	Cisco-VPN3000-WebVPN-Apply-ACL		102	integer
+ATTRIBUTE	Cisco-VPN3000-WebVPN-SSL-VPN-Client-Enable 103	integer
+ATTRIBUTE	Cisco-VPN3000-WebVPN-SSL-VPN-Client-Required 104	integer
+ATTRIBUTE	Cisco-VPN3000-WebVPN-SSL-VPN-Client-Keep-Installation 105	integer
+
 ATTRIBUTE	CVPN3000-Partition-Primary-DHCP		128	ipaddr
 ATTRIBUTE	CVPN3000-Partition-Secondary-DHCP	129	ipaddr
 ATTRIBUTE	CVPN3000-Partition-Premise-Router	131	ipaddr
@@ -92,16 +120,16 @@ ATTRIBUTE	CVPN3000-Partition-Mobile-IP-Address	134	ipaddr
 ATTRIBUTE	CVPN3000-Partition-Mobile-IP-SPI	135	integer
 ATTRIBUTE	CVPN3000-Strip-Realm			136	integer
 ATTRIBUTE	CVPN3000-Group-Name			137	integer
-ATTRIBUTE	CPVN3000-Smart-Tunnel-Auto		138	integer
-ATTRIBUTE	CPVN3000-VLAN				140	integer
-ATTRIBUTE	CPVN3000-NAC-Settings			141	string
-ATTRIBUTE	CPVN3000-Member-Of			145	string
-ATTRIBUTE	CPVN3000-Address-Pools			217	string
-ATTRIBUTE	CPVN3000-IPv6-Address-Pools		218	string
-ATTRIBUTE	CPVN3000-IPv6-VPN-Filter		219	string
+ATTRIBUTE	CVPN3000-Smart-Tunnel-Auto		138	integer
+ATTRIBUTE	CVPN3000-VLAN				140	integer
+ATTRIBUTE	CVPN3000-NAC-Settings			141	string
+ATTRIBUTE	CVPN3000-Member-Of			145	string
+ATTRIBUTE	CVPN3000-Address-Pools			217	string
+ATTRIBUTE	CVPN3000-IPv6-Address-Pools		218	string
+ATTRIBUTE	CVPN3000-IPv6-VPN-Filter		219	string
 ATTRIBUTE	CVPN3000-Privilege-Level		220	integer
-ATTRIBUTE	CPVN3000-WebVPN-Macro-Value1		223	string
-ATTRIBUTE	CPVN3000-WebVPN-Macro-Value2		224	string
+ATTRIBUTE	CVPN3000-WebVPN-Macro-Value1		223	string
+ATTRIBUTE	CVPN3000-WebVPN-Macro-Value2		224	string
 
 VALUE	CVPN3000-Allow-Alpha-Only-Passwords Disallow		0
 VALUE	CVPN3000-Allow-Alpha-Only-Passwords Allow		1
@@ -207,8 +235,8 @@ VALUE	CVPN3000-IPSec-Over-UDP		ON			1
 VALUE	CVPN3000-Strip-Realm		FALSE			0
 VALUE	CVPN3000-Strip-Realm		TRUE			1
 
-VALUE	CPVN3000-Smart-Tunnel-Auto	Disabled		0
-VALUE	CPVN3000-Smart-Tunnel-Auto	Enabled			1
-VALUE	CPVN3000-Smart-Tunnel-Auto	Auto			2
+VALUE	CVPN3000-Smart-Tunnel-Auto	Disabled		0
+VALUE	CVPN3000-Smart-Tunnel-Auto	Enabled			1
+VALUE	CVPN3000-Smart-Tunnel-Auto	Auto			2
 
 END-VENDOR	Cisco-VPN3000

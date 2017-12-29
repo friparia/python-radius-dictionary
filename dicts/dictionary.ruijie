@@ -1,17 +1,16 @@
 # -*- text -*-
 #
-#	Starent SuperStack Firewall dictionary
-#	Bought from Sonicwall, apparently, from Enterprise number 8741.
+#	Ruijie dictionary
 #
 #		$Id$
 #
 
-VENDOR		Starent				4881
+VENDOR		Ruijie				4881
 
 #
 #	These attributes contain the access-level value.
 #
-BEGIN-VENDOR	Starent
+BEGIN-VENDOR	Ruijie
 
 ATTRIBUTE	USER_IP				3	string
 ATTRIBUTE	MAX_DOWN_RATE			1	string
@@ -65,4 +64,4 @@ ATTRIBUTE   USER_SU_EIGENVLAUE_V3			77	string
 ATTRIBUTE   FLAG        88  string
 ATTRIBUTE   SERVICE_NAME_SWITCH_FLAG        100  integer
 
-END-VENDOR    Starent
+END-VENDOR    Ruijie
