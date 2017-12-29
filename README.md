@@ -2,4 +2,6 @@
 radius dictionaries and a simple importer to import theses dictionaries (based on pyrad)
 
 # usage
-`python import.py dicts/dictionary`
+* import `init.sql`
+* change `config.py`
+* `python import.py dicts/dictionary`
