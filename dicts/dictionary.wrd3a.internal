@@ -15,9 +15,9 @@ ATTRIBUTE	Login-Time				1042	string
 ATTRIBUTE	Stripped-User-Name			1043	string
 ATTRIBUTE	Current-Time				1044	string
 ATTRIBUTE	Realm					1045	string
-ATTRIBUTE	Client-IP-Address			1052	ipaddr virtual
-ATTRIBUTE	Packet-Src-IPv6-Address			1097	ipv6addr virtual
-ATTRIBUTE	Packet-Dst-IPv6-Address			1098	ipv6addr virtual
+ATTRIBUTE	Client-IP-Address			1052	ipaddr
+ATTRIBUTE	Packet-Src-IPv6-Address			1097	ipv6addr
+ATTRIBUTE	Packet-Dst-IPv6-Address			1098	ipv6addr
 ATTRIBUTE	Cleartext-Password			1100	string
 ATTRIBUTE	Password-With-Header			1101	string
 ATTRIBUTE	Inner-Tunnel-User-Name			1102	string
