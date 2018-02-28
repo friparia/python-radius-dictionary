@@ -16,3 +16,6 @@ VALUE	WRD-Realm-Type	Normal			1
 VALUE	WRD-Realm-Type	NT-Domain		2
 
 END-VENDOR WRD
+
+VALUE   Login-Service           SSH                     50
+VALUE   Login-Service           Terminal                52

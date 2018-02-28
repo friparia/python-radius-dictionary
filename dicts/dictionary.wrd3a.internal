@@ -1,0 +1,34 @@
+# -*- text -*-
+# Copyright (C) 2015 The FreeRADIUS Server project and contributors
+#
+#	Non Protocol Attributes used by FreeRADIUS
+#
+#	$Id: 30baba16c345e64f1142e22eb1cc52983e19e3fd $
+#
+
+#	Non-Protocol Attributes
+#	These attributes are used internally by the server
+#
+
+#
+ATTRIBUTE	Login-Time				1042	string
+ATTRIBUTE	Stripped-User-Name			1043	string
+ATTRIBUTE	Current-Time				1044	string
+ATTRIBUTE	Realm					1045	string
+ATTRIBUTE	Client-IP-Address			1052	ipaddr virtual
+ATTRIBUTE	Packet-Src-IPv6-Address			1097	ipv6addr virtual
+ATTRIBUTE	Packet-Dst-IPv6-Address			1098	ipv6addr virtual
+ATTRIBUTE	Cleartext-Password			1100	string
+ATTRIBUTE	Password-With-Header			1101	string
+ATTRIBUTE	Inner-Tunnel-User-Name			1102	string
+#
+#	For default policies
+
+ATTRIBUTE	Stripped-User-Domain			1138	string
+ATTRIBUTE	Called-Station-SSID			1139	string
+
+ATTRIBUTE	Acct-Input-Octets64			1148	integer64
+ATTRIBUTE	Acct-Output-Octets64			1149	integer64
+ATTRIBUTE	Outer-Realm-Name			1218	string
+ATTRIBUTE	Inner-Realm-Name			1219	string
+

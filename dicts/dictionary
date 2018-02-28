@@ -293,6 +293,7 @@ $INCLUDE dictionary.zte
 $INCLUDE dictionary.zyxel
 $INCLUDE dictionary.ruijie
 $INCLUDE dictionary.wrd
+$INCLUDE dictionary.wrd3a.internal
 
 #
 #	And finally the server internal attributes.
